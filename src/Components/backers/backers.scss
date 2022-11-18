@@ -1,0 +1,35 @@
+@import "../../variables";
+#backers {
+  position: relative;
+  z-index: 1;
+  // margin-bottom: 500px;
+
+  #bg {
+    width: 90%;
+    height: 540px;
+    margin: 3rem 0;
+    margin-left: 5%;
+  }
+  #brandsCont {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    #title {
+      color: $chocolate;
+      background: url(../../assets/images/titlebg.webp) no-repeat;
+      background-position: center;
+      background-size: contain;
+      padding: 32px;
+    }
+    #brands {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #backers {
+    display: none;
+  }
+}

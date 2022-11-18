@@ -1,0 +1,36 @@
+#sidenav {
+  position: fixed;
+  right: 0;
+  padding: 32px;
+  top: 25%;
+  z-index: 100;
+
+  .navItem {
+    margin-bottom: 24px;
+    color: #ffe383;
+    transition: scale 0.3s ease-out;
+    .navLogo {
+      width: 50px;
+    }
+    .navTitle {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+    &:hover {
+      scale: 0.8;
+    }
+  }
+}
+
+#sidenav:hover {
+  background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  .navTitle {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  #sidenav {
+    display: none;
+  }
+}

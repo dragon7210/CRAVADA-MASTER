@@ -1,0 +1,61 @@
+@import "../../variables";
+
+#cardsContainer {
+  margin-top: -200px;
+  padding-top: 200px;
+  margin-bottom: 240px;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), $bg, $bg, $bg, $bg);
+  #cards {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+
+    .infoCard {
+      color: #333;
+      max-width: 400px;
+      position: relative;
+      margin: 0 auto;
+
+      .cardbg {
+        width: 100%;
+        height: 190%;
+        border-radius: 40px;
+      }
+
+      .cardContent {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        div {
+          margin: 0 auto;
+          width: 60%;
+
+          h2 {
+            font-weight: bold;
+          }
+          p {
+            line-height: 1.5;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #cardsContainer {
+    #cards {
+      gap: 8rem;
+      .infoCard {
+        scale: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+#ocean {
+  position: relative;
+  // margin-top: 300px;
+  width: 100vw;
+  height: fit-content;
+
+  #bottombg {
+    width: 100%;
+  }
+  #bottomPlatform {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+    width: 15%;
+    animation: platformOwl 3s infinite ease-in-out;
+  }
+  #bottomOwl {
+    position: absolute;
+    bottom: 25%;
+    left: 41.5%;
+    width: 12%;
+    animation: platformOwl 3s infinite ease-in-out;
+  }
+  #bottomRocket {
+    position: absolute;
+    top: 20%;
+    right: 17%;
+    width: 5%;
+    animation: rocket 10s infinite ease-in-out;
+  }
+  #bottomCoins {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 10%;
+  }
+  #bottomJewel {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 12%;
+    animation: jewel 2.5s infinite ease-in-out;
+  }
+}
+
+@keyframes platformOwl {
+  50% {
+    transform: translateY(10px);
+  }
+}
+@keyframes jewel {
+  50% {
+    transform: translateY(-10px);
+    rotate: -5deg;
+  }
+}
+@keyframes rocket {
+  50% {
+    transform: translate(-250%, 100%);
+    scale: 2;
+    rotate: 45deg;
+  }
+}

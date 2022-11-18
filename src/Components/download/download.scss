@@ -1,0 +1,40 @@
+#download {
+  margin: 5rem 0;
+  position: relative;
+  #platforms {
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    h1 {
+      margin-bottom: 80px;
+    }
+    #brands {
+      flex-wrap: wrap;
+      .logo {
+        width: 220px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #download {
+    margin: 15rem 0;
+    // #dbg {
+    //   display: none;
+    // }
+    #platforms {
+      width: 100%;
+      position: absolute;
+      bottom: 20%;
+      h1 {
+        margin-bottom: 0;
+      }
+      #brands {
+        .logo {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

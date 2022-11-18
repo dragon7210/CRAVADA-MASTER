@@ -1,0 +1,135 @@
+@import "../../variables";
+#header {
+  #logoContainer {
+    width: 156px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #navbarContainer {
+    font-weight: bold;
+    &::before {
+      background: url("../../assets/images/navbar_background.webp") no-repeat
+        50%;
+      background-size: contain;
+      height: 100%;
+      max-height: 7rem;
+      max-width: 53rem;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-45%);
+      width: 100%;
+      z-index: -1;
+    }
+    #navLinks {
+      position: absolute;
+      top: 54px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      list-style: none;
+      .navLink {
+        position: relative;
+        a {
+          color: white;
+          text-decoration: none;
+          text-shadow: 0 0 4px black;
+          transition: all 0.3s ease-out;
+        }
+        &:hover {
+          a {
+            color: $yellow;
+          }
+        }
+        #moreItems {
+          width: 140px;
+          height: 156px;
+          margin-top: 16px;
+          position: absolute;
+          left: -40px;
+          background: url(../../assets/images/submenu-bg.webp);
+          background-repeat: no-repeat;
+          background-size: contain;
+          font-weight: 800;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .moreItem {
+            color: $chocolate;
+            margin-bottom: 24px;
+            cursor: pointer;
+            &:hover {
+              color: rgb(170, 142, 106);
+            }
+          }
+          #border {
+            width: 80%;
+            height: 4px;
+            margin-bottom: 24px;
+            background-color: burlywood;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #mobileNavBtn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: $chocolate;
+    font-size: 48px;
+    z-index: 999;
+  }
+  #mobileNavLinks {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 8px;
+    background: $chocolate;
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 999;
+
+    .navLink {
+      list-style: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #444;
+      }
+
+      a {
+        font-size: 24px;
+        color: #eee;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #header {
+    #logoContainer {
+      margin-top: 40px;
+      width: 80px;
+    }
+    #navbarContainer {
+      display: none;
+    }
+    #mobileNavBtn {
+      display: block;
+    }
+    #mobileNavLinks {
+      display: block;
+    }
+  }
+}
